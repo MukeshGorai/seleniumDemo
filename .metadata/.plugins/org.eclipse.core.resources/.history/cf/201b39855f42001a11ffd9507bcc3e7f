@@ -1,0 +1,21 @@
+package selenium.webDrive.basicTest;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class LoginTest {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.gecko.driver", "C://Users//y509137//eclipse//geckodriver//geckodriver.exe");
+		WebDriver driver= new FirefoxDriver();
+		
+		driver.get("http://newtours.demoaut.com/");
+		driver.findElement(By.name("userName")).sendKeys("muku");
+		driver.findElement(By.name("password")).sendKeys("Mukukumar123@");
+		driver.findElement(By.name("login")).click();
+
+	}
+
+}

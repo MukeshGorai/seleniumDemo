@@ -1,0 +1,42 @@
+package selenium.webDrive.basicTest;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class FirstTest {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C://Users//y509137//eclipse//geckodriver//geckodriver.exe");
+		
+		//FirefoxDriver driver= new FirefoxDriver();
+		
+		WebDriver driver = new FirefoxDriver();//invoke the browser
+		
+		driver.get("http://newtours.demoaut.com/");//open url in the browser
+		
+		//driver.findElement(By.name("userName")).sendKeys("muku");
+		
+		WebElement username=driver.findElement(By.name("userName"));
+		username.sendKeys("muku");
+		
+		driver.findElement(By.name("password")).sendKeys("Mukukumar123@");
+		
+		driver.findElement(By.name("login")).click();
+		
+		String exptitle="Find a Flight: Mercury Tours: ";
+		
+		String acttitle= driver.getTitle();
+		
+		if(exptitle.equals(acttitle)) {
+			System.out.println("test is passed");
+		}
+		else {
+			System.out.println("test is failed");
+		}
+		driver.close();
+		
+	}
+
+}

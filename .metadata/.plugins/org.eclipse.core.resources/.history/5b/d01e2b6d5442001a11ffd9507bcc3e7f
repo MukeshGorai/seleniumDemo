@@ -1,0 +1,19 @@
+package selenium.webDrive.basicTest;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class FirstTest {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.firefox.marionette", "C://Users//y509137//eclipse//geckodriver//geckodriver.exe");
+		
+		FirefoxDriver driver= new FirefoxDriver();
+		
+		//WebDriver driver = new FirefoxDriver();// all browser easy to use
+		
+		
+		
+	}
+
+}

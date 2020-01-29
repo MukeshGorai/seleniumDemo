@@ -1,0 +1,21 @@
+package selenium.webDrive.basicTest;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TwitterLogin {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.gecko.driver", "C://Users//y509137//eclipse//geckodriver//geckodriver.exe");
+		
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://twitter.com/");
+		//driver.findElement(By.name("session[username_or_email]")).sendKeys("mukeshgorai21@gmail.com");
+		//driver.findElement(By.name("session[password]")).sendKeys("mukesh12@");
+		//driver.findElement(By.cssSelector("css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0")).click();
+
+	}
+
+}

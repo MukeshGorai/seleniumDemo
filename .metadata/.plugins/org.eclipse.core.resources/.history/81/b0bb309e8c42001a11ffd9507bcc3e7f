@@ -1,0 +1,18 @@
+package headless;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class NavigateCommand {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C://Users//y509137//eclipse//geckodriver//geckodriver.exe");
+		
+		WebDriver driver=new FirefoxDriver();
+		
+		driver.get("https://mail.google.com/mail/u/0/#inbox");
+		driver.navigate().to("https://github.com/login");
+
+	}
+
+}

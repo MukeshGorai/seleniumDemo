@@ -1,0 +1,29 @@
+package headless;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class ConditionalCommand {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C://Users//y509137//eclipse//geckodriver//geckodriver.exe");
+		WebDriver driver=new FirefoxDriver();
+		
+		driver.get("https://www.facebook.com/");
+		
+		WebElement email=driver.findElement(By.xpath(".//*[@id=\"email\"]"));
+		WebElement password=driver.findElement(By.xpath(".//*[@id=\"pass\"]"));
+		
+		if(email.isDisplayed() && email.isEnabled()) {
+			email.sendKeys("mukeshgoraigs");
+		}
+		if(password.isDisplayed() && password.isEnabled()) {
+			password.sendKeys("mdsfgfhjkkytre");
+		}
+		
+		System.out.println(driver.findElement(By.xpath(".//*[@id=\"u_0_6\"]")));
+		System.out.println(driver.findElement(By.xpath(".//*[@id=\"u_0_7\"]")));
+		
+	}
+}

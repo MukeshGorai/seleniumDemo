@@ -20,13 +20,15 @@ public class GithubLogin {
 		String exp_title= "GitHub";
 		String act_title= driver.getTitle();
 		
-		if(exp_title.equals(act_title)==true) {
-			System.out.println("tested is passed");
-		}
-		else {
-			System.out.println("tested is failed");
-		}
-		driver.close();
+		driver.findElement(By.xpath("/html/body/div[4]/div/aside[1]/div[2]/div/div/ul/li[1]/div/a")).click();
+//		if(exp_title.equals(act_title)==true) {
+//			System.out.println("tested is passed");
+//		}
+//		else {
+//			System.out.println("tested is failed");
+//		}
+		//driver.close();
+		
 	}
 
 }
